@@ -126,3 +126,469 @@
    
 </body>
 </html>
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fonts */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: #1f1f1f;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .logo span {
+    color: #00bcd4;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #00bcd4;
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('images/bg.jpg') center/cover no-repeat;
+    color: white;
+    padding: 80px 0;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .hero-text {
+    flex: 1;
+  }
+  
+  .hero-text h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .hero-text h1 span {
+    color: #00bcd4;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  
+  .hero-img img {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  }
+  .scroll-down {
+    text-align: center;
+    margin-top: 30px;
+    animation: bounce 2s infinite;
+  }
+  
+  .scroll-down span {
+    font-size: 24px;
+    color: #00bcd4;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+  
+  /* Button */
+  .btn {
+    background: #00bcd4;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #0097a7;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 80px 0;
+    background: white;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .about-img img {
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  }
+  
+  .about-text h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  .about-text p {
+    margin-bottom: 15px;
+    color: #555;
+  }
+  /* Enhanced About Styles */
+.fancy-about {
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #00bcd4;
+    transition: transform 0.3s ease;
+  }
+  
+  .fancy-about:hover {
+    transform: translateY(-5px);
+  }
+  
+  .fancy-about h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #00bcd4;
+  }
+  
+  .fancy-about .intro {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .about-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .about-list li {
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .fancy-btn {
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .fancy-btn:hover {
+    background: linear-gradient(135deg, #0097a7, #007b8a);
+    transform: scale(1.05);
+  }
+  
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-content, .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .hero-img img,
+    .about-img img {
+      margin-top: 20px;
+    }
+  }
+  .fancy-about {
+    animation: fadeIn 1.2s ease;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+/* Section Title */
+.section-title {
+    font-size: 30px;
+    color: #00bcd4;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  /* Skills Section */
+  .skills-section {
+    padding: 60px 0;
+    background: #f7f9fc;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .skill-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    transition: transform 0.2s ease;
+  }
+  
+  .skill-box:hover {
+    transform: translateY(-5px);
+    background: #e0f7fa;
+  }
+  /* Projects Section */
+.projects-section {
+    padding: 60px 0;
+    background: #f4faff;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-card h3 {
+    margin-bottom: 15px;
+    color: #00bcd4;
+  }
+  
+  .project-card p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .project-tag {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #e0f7fa;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #007b8a;
+    font-weight: 500;
+  }
+  
+  .coming-soon {
+    opacity: 0.85;
+    background: linear-gradient(to right, #f0f0f0, #e0f7fa);
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    background: #fff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .contact-content p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .contact-info p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info a {
+    color: #00bcd4;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bounceHover {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+  
+  /* Apply to sections */
+  .section-title {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+  }
+  
+  .skills-section,
+  .projects-section,
+  .contact-section {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+  }
+  
+  /* Animate project cards on hover */
+  .project-card:hover {
+    animation: bounceHover 0.5s ease;
+  }
+  
+  /* Animate button on hover */
+  .btn {
+    transition: transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Add to about section */
+  .fancy-about {
+    animation: zoomIn 1.2s ease;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+  }
+ /* whatsapp  */
+ .whatsapp-float {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  .whatsapp-float img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+  .whatsapp-float::after {
+    content: 'Chat with me!';
+    position: absolute;
+    right: 60px;
+    bottom: 10px;
+    background: #25D366;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .whatsapp-float:hover::after {
+    opacity: 1;
+  }
+    
